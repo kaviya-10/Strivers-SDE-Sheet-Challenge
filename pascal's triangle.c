@@ -16,8 +16,8 @@ void Pascal(int n)
 
 int main()
 {
-    int n=5;
-    //scanf("%d",&n);
+    int n;
+    scanf("%d",&n);
     Pascal(n);
     return 0;
 }
