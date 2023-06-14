@@ -9,22 +9,22 @@ int main(){
     for(int j=0;j<n;j++){
         scanf("%d",&b[j]);
     }
-    int y=m+n;
-    int x=0;
-    int c[y];
-    //printf("%d %d",a[0],b[n-1]);
-    int k=0,l=0;
-    while(k<m||l<n){
-        if(a[k]>b[l]){
-            c[x++]=b[l];
-            l++;
-        }
-        else{
-            c[x++]=a[k];
-            k++;
-        }
+    int x=m+n;
+    for(int j=m,h=0;j<x;j++,h++){
+       a[j]=b[h];
     }
-    for(int x=0;x<y;x++){
-        printf("%d ",c[x]);
+     for(int i=0;i<x;i++){
+      for(int j=i+1;j<x;j++){
+          if(a[i]>a[j]){
+            int temp=a[j];
+            a[j]=a[i];
+            a[i]=temp;
+
+          }
+         }
+     }
+
+    for(int i=0;i<x;i++){
+        printf("%d ",a[i]);
     }
 }
